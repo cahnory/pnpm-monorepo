@@ -1,5 +1,8 @@
 # dependencies
 node_modules
 
+# turbo
+.turbo
+
 # typescript
 *.tsbuildinfo
