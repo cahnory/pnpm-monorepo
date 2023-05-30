@@ -1,0 +1,22 @@
+{
+  "name": "@pnpm-workspace/sample-app",
+  "version": "0.0.1",
+  "private": true,
+  "license": "UNLICENSED",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "build": "rm -rf ./build && tsc --build --force",
+    "dev": "rm -f ./tsconfig.tsbuildinfo && tsc --watch",
+    "test": "pnpm test:lint && pnpm test:types && pnpm test:unit",
+    "test:lint": "eslint .",
+    "test:types": "tsc --noEmit",
+    "test:unit": "echo \"Warning: no test specified\" && exit 0"
+  },
+  "dependencies": {
+    "@pnpm-workspace/sample-pkg": "workspace:*"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.4"
+  }
+}
