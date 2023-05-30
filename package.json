@@ -1,0 +1,15 @@
+{
+  "name": "pnpm-workspace",
+  "version": "0.0.1",
+  "private": true,
+  "license": "UNLICENSED",
+  "workspaces": {
+    "packages": [
+      "apps/*",
+      "packages/*"
+    ]
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
