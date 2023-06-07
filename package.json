@@ -14,12 +14,15 @@
     "prepare": "pnpm build",
     "build": "turbo run build",
     "dev": "turbo run dev",
-    "test": "turbo run test",
+    "test": "turbo run test && pnpm test:commit",
     "test:lint": "turbo run test:lint",
     "test:types": "turbo run test:types",
-    "test:unit": "turbo run test:unit"
+    "test:unit": "turbo run test:unit",
+    "test:commit": "commitlint --from $(git merge-base origin/main HEAD)"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.6.5",
+    "@commitlint/config-conventional": "^17.6.5",
     "@typescript-eslint/eslint-plugin": "^5.59.8",
     "eslint": "^8.41.0",
     "eslint-config-prettier": "^8.8.0",
