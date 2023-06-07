@@ -11,10 +11,18 @@ Template for Monorepo with PNPm, TypeScript, ESLint, Prettier, and TurboRepo.
     - [3.1.1. build](#311-build)
     - [3.1.2. dev](#312-dev)
     - [3.1.3. test](#313-test)
-      - [3.1.3.1. test:lint](#3131-testlint)
-      - [3.1.3.2. test:types](#3132-testtypes)
-      - [3.1.3.3. test:unit](#3133-testunit)
+    - [3.1.4. test:lint](#314-testlint)
+    - [3.1.5. test:types](#315-testtypes)
+    - [3.1.6. test:unit](#316-testunit)
   - [3.2. Root-Level Scripts](#32-root-level-scripts)
+    - [3.2.1. build](#321-build)
+    - [3.2.2. dev](#322-dev)
+    - [3.2.3. test](#323-test)
+    - [3.2.4. test:lint](#324-testlint)
+    - [3.2.5. test:types](#325-testtypes)
+    - [3.2.6. test:unit](#326-testunit)
+    - [3.2.7. test:commit](#327-testcommit)
+    - [3.2.8. test:rebase](#328-testrebase)
 - [4. VSCode integration](#4-vscode-integration)
 - [5. Troubleshooting](#5-troubleshooting)
   - [5.1. IDE issues or project malfunctioning? Try `pnpm prepare`!](#51-ide-issues-or-project-malfunctioning-try-pnpm-prepare)
@@ -83,25 +91,64 @@ To add a new package:
 ### 3.1. Package Scripts
 
 #### 3.1.1. build
-The build script is used to compile the source code of the package. It generates the necessary output files, such as transpiled JavaScript files or bundled assets. Running this script ensures that the package is built and ready for deployment or usage.
+
+The *build* script is used to compile the source code of the package. It generates the necessary output files, such as transpiled JavaScript files or bundled assets. Running this script ensures that the package is built and ready for deployment or usage.
 
 #### 3.1.2. dev
-The dev script is helpful during the development phase. It allows developers to watch the package's source files for changes and automatically triggers a rebuild whenever a file is modified. This feature provides a convenient workflow by keeping the package up to date during development.
+
+The *dev* script is helpful during the development phase. It allows developers to watch the package's source files for changes and automatically triggers a rebuild whenever a file is modified. This feature provides a convenient workflow by keeping the package up to date during development.
 
 #### 3.1.3. test
-The test script is responsible for running various tests associated with the package. It validates the functionality and quality of the package. The test script further divides its functionality into three sub-scripts: lint, types, and unit.
 
-##### 3.1.3.1. test:lint
-The test:lint script checks that the package's source code adheres to the eslint rules defined for the monorepo. It ensures consistent code style, enforces best practices, and maintains code quality throughout the package.
+The *test* script is responsible for running various tests associated with the package. It validates the functionality and quality of the package. The test script further divides its functionality into three sub-scripts: lint, types, and unit.
 
-##### 3.1.3.2. test:types
-The test:types script verifies that the package's source code is free from TypeScript type errors. It performs static type checking, ensuring type safety within the package. Running this script helps catch potential type-related issues before runtime.
+#### 3.1.4. test:lint
 
-##### 3.1.3.3. test:unit
-The test:unit script runs the package's unit tests. It validates the behavior of individual components, functions, or modules within the package. This script ensures that the package's internal units are functioning as expected.
+The *test:lint* script checks that the package's source code adheres to the eslint rules defined for the monorepo. It ensures consistent code style, enforces best practices, and maintains code quality throughout the package.
+
+#### 3.1.5. test:types
+
+The *test:types* script verifies that the package's source code is free from TypeScript type errors. It performs static type checking, ensuring type safety within the package. Running this script helps catch potential type-related issues before runtime.
+
+#### 3.1.6. test:unit
+
+The *test:unit* script runs the package's unit tests. It validates the behavior of individual components, functions, or modules within the package. This script ensures that the package's internal units are functioning as expected.
 
 ### 3.2. Root-Level Scripts
+
 The monorepo also includes root-level scripts with similar functionality as their package-level counterparts. The key distinction is that these scripts can be executed across all packages within the monorepo simultaneously, providing a unified and efficient workflow. Running the root-level scripts allows you to perform the respective actions (build, dev, test) on multiple packages within the monorepo in a single operation. This saves time and ensures consistency across the entire codebase.
+
+#### 3.2.1. build
+
+Run the *build* script for all packages within the monorepo.
+
+#### 3.2.2. dev
+
+Run the *dev* script for all packages within the monorepo.
+
+#### 3.2.3. test
+
+Run the *test* script on all packages within the monorepo followed by the root scripts test:commit and test:rebase.
+
+#### 3.2.4. test:lint
+
+Run the *test:lint* script for all packages within the monorepo.
+#### 3.2.5. test:types
+
+Run the *test:types* script for all packages within the monorepo.
+#### 3.2.6. test:unit
+
+Run the *test:unit* script for all packages within the monorepo.
+
+#### 3.2.7. test:commit
+
+The "test:commit" script verifies the commit messages of the commits added by the current branch using the commitlint library. It performs linting or checks against predefined rules, specified in the commitlint configuration, to ensure that the commit messages follow specific guidelines or standards. This helps maintain consistency and clarity in the commit history of the project.
+
+You can learn more about commitlint by visiting the [official commitlint documentation](https://commitlint.js.org/).
+
+#### 3.2.8. test:rebase
+
+The *test:rebase* script examines whether a rebase with the remote default branch is necessary. It analyzes the current branch's changes and compares them with the default branch in the remote repository. This check helps identify if the current branch is outdated or needs to be updated to incorporate the latest changes from the default branch. Performing the necessary rebase ensures that the branch remains up to date and avoids potential conflicts during future merges or pull requests.
 
 ## 4. VSCode integration
 
