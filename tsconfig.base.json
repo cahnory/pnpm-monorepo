@@ -22,7 +22,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
-      "@pnpm-workspace/sample-pkg": ["./packages/sample"]
+      "@pnpm-monorepo/sample-pkg": ["./packages/sample"]
     },
     "preserveSymlinks": true,
     "preserveWatchOutput": true,

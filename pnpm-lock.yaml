@@ -49,7 +49,7 @@ importers:
 
   apps/sample:
     dependencies:
-      '@pnpm-workspace/sample-pkg':
+      '@pnpm-monorepo/sample-pkg':
         specifier: workspace:*
         version: link:../../packages/sample
     devDependencies:

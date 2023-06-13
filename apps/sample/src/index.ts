@@ -1,3 +1,3 @@
-import { sample } from "@pnpm-workspace/sample-pkg";
+import { sample } from "@pnpm-monorepo/sample-pkg";
 
 sample() satisfies { pkg: "sample" };

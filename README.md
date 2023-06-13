@@ -47,7 +47,7 @@ On the other hand, the packages residing in the "packages" directory are specifi
 ### 2.1. Adding a New App
 
 To add a new app:
-1. duplicate the *@pnpm-workspace/sample-app* package found in the "apps/sample" directory.
+1. duplicate the *@pnpm-monorepo/sample-app* package found in the "apps/sample" directory.
 
 2. Rename the duplicated package to your desired new package name.
 
@@ -55,14 +55,14 @@ To add a new app:
 
     ```json
     {
-      "name": "@pnpm-workspace/<new-app-name>"
+      "name": "@pnpm-monorepo/<new-app-name>"
     }
     ```
 
 ### 2.2. Adding a New Package
 
 To add a new package:
-1. duplicate the *@pnpm-workspace/sample-pkg* package found in the "packages/sample" directory.
+1. duplicate the *@pnpm-monorepo/sample-pkg* package found in the "packages/sample" directory.
 
 2. Rename the duplicated package to your desired new package name.
 
@@ -70,7 +70,7 @@ To add a new package:
 
     ```json
     {
-      "name": "@pnpm-workspace/<new-package-name>"
+      "name": "@pnpm-monorepo/<new-package-name>"
     }
     ```
 
@@ -80,7 +80,7 @@ To add a new package:
     {
       "compilerOptions": {
         "paths": {
-          "@pnpm-workspace/<new-package>": ["./packages/<new-package-name>"]
+          "@pnpm-monorepo/<new-package>": ["./packages/<new-package-name>"]
         }
       }
     }
@@ -171,7 +171,7 @@ The pnpm prepare command is designed to reinstall project dependencies and perfo
 ### 5.2. Unable to resolve path to module… eslint("import/no-unresolved")
 
 When trying to import a package from the repository, if you encounter the error message:
-> Unable to resolve path to module "@pnpm-workspace/\<module-name\>". eslint("import/no-unresolved")
+> Unable to resolve path to module "@pnpm-monorepo/\<module-name\>". eslint("import/no-unresolved")
 
 it is an indication that the package may need to be built or rebuilt. Execute the pnpm prepare command:
 

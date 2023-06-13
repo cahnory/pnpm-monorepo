@@ -1,5 +1,5 @@
 {
-  "name": "@pnpm-workspace/sample-app",
+  "name": "@pnpm-monorepo/sample-app",
   "version": "0.0.1",
   "private": true,
   "license": "UNLICENSED",
@@ -14,7 +14,7 @@
     "test:unit": "echo \"Warning: no test specified\" && exit 0"
   },
   "dependencies": {
-    "@pnpm-workspace/sample-pkg": "workspace:*"
+    "@pnpm-monorepo/sample-pkg": "workspace:*"
   },
   "devDependencies": {
     "typescript": "^5.0.4"
