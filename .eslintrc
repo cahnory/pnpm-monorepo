@@ -15,12 +15,17 @@
       ],
       "files": ["**/*.ts?(x)"],
       "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": true
+      },
       "plugins": ["@typescript-eslint"],
       "rules": {
         "@typescript-eslint/consistent-type-imports": "error",
+        "@typescript-eslint/dot-notation": "error",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/sort-type-union-intersection-members": "error",
+        "dot-notation": "off",
         "spaced-comment": ["error", "always", { "markers": ["/"] }],
         "no-use-before-define": "off"
       }
