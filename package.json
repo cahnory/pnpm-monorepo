@@ -32,10 +32,8 @@
     "eslint-config-prettier": "^8.8.0",
     "eslint-import-resolver-exports": "1.0.0-beta.5",
     "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-perfectionist": "^1.4.0",
     "eslint-plugin-prettier": "^4.2.1",
-    "eslint-plugin-simple-import-sort": "^10.0.0",
-    "eslint-plugin-sort-destructure-keys": "^1.5.0",
-    "eslint-plugin-typescript-sort-keys": "^2.3.0",
     "only-allow": "^1.1.1",
     "prettier": "^2.8.8",
     "turbo": "^1.9.9"

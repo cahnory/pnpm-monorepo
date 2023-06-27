@@ -2,7 +2,11 @@
   "env": {
     "es2021": true
   },
-  "extends": ["eslint:recommended", "prettier"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:perfectionist/recommended-natural",
+    "prettier"
+  ],
   "overrides": [
     {
       "extends": [
@@ -11,16 +15,14 @@
       ],
       "files": ["**/*.ts?(x)"],
       "parser": "@typescript-eslint/parser",
-      "plugins": ["@typescript-eslint", "typescript-sort-keys"],
+      "plugins": ["@typescript-eslint"],
       "rules": {
         "@typescript-eslint/consistent-type-imports": "error",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/sort-type-union-intersection-members": "error",
         "spaced-comment": ["error", "always", { "markers": ["/"] }],
-        "no-use-before-define": "off",
-        "typescript-sort-keys/interface": "error",
-        "typescript-sort-keys/string-enum": "error"
+        "no-use-before-define": "off"
       }
     }
   ],
@@ -28,12 +30,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": [
-    "prettier",
-    "sort-destructure-keys",
-    "simple-import-sort",
-    "import"
-  ],
+  "plugins": ["perfectionist", "prettier", "import"],
   "reportUnusedDisableDirectives": true,
   "rules": {
     "array-callback-return": [
@@ -200,38 +197,6 @@
     "radix": "error",
     "require-atomic-updates": "error",
     "require-await": "error",
-    "simple-import-sort/exports": "error",
-    "simple-import-sort/imports": [
-      "error",
-      {
-        "groups": [
-          // Side effect imports
-          ["^\\u0000"],
-          // Node.js builtin imports
-          ["^node:", "^node:.+\\u0000$"],
-          // Packages imports
-          ["^[^./]", "^[^./].+\\u0000$"],
-          // Relative imports
-          ["^\\.", "^\\..+\\u0000$"],
-          // Assets imports
-          ["\\.(css|svg|jpg|gif|png|eot|svg|ttf|woff|woff2|md|mdx)"]
-        ]
-      }
-    ],
-    "sort-destructure-keys/sort-destructure-keys": [
-      "error",
-      { "caseSensitive": true }
-    ],
-    "sort-keys": [
-      "error",
-      "asc",
-      {
-        "allowLineSeparatedGroups": true,
-        "caseSensitive": true,
-        "minKeys": 2,
-        "natural": true
-      }
-    ],
     "sort-vars": "error",
     "spaced-comment": ["error", "always"],
     "symbol-description": "error",
