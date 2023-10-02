@@ -1,1 +1,1 @@
-export const sample = () => ({ pkg: "sample" } as const);
+export const sample = () => ({ pkg: "sample" }) as const;

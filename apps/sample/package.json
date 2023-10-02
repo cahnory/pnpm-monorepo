@@ -17,6 +17,6 @@
     "@pnpm-monorepo/sample-lib": "workspace:*"
   },
   "devDependencies": {
-    "typescript": "^5.0.4"
+    "typescript": "^5.2.2"
   }
 }

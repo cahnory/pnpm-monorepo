@@ -25,17 +25,17 @@
     "test:rebase": "scripts/test-rebase.sh $npm_package_config_defaultBranch"
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.6.6",
-    "@commitlint/config-conventional": "^17.6.6",
-    "@typescript-eslint/eslint-plugin": "^5.60.1",
-    "eslint": "^8.43.0",
-    "eslint-config-prettier": "^8.8.0",
+    "@commitlint/cli": "^17.7.2",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "eslint": "^8.50.0",
+    "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-exports": "1.0.0-beta.5",
-    "eslint-plugin-import": "^2.27.5",
-    "eslint-plugin-perfectionist": "^1.4.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "only-allow": "^1.1.1",
-    "prettier": "^2.8.8",
-    "turbo": "^1.10.6"
+    "eslint-plugin-import": "^2.28.1",
+    "eslint-plugin-perfectionist": "^2.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "only-allow": "^1.2.0",
+    "prettier": "^3.0.3",
+    "turbo": "^1.10.14"
   }
 }
