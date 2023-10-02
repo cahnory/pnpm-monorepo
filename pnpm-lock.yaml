@@ -47,15 +47,15 @@ importers:
 
   apps/sample:
     dependencies:
-      '@pnpm-monorepo/sample-pkg':
+      '@pnpm-monorepo/sample-lib':
         specifier: workspace:*
-        version: link:../../packages/sample
+        version: link:../../libs/sample
     devDependencies:
       typescript:
         specifier: ^5.0.4
         version: 5.0.4
 
-  packages/sample:
+  libs/sample:
     devDependencies:
       typescript:
         specifier: ^5.0.4

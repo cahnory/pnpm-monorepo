@@ -1,3 +1,3 @@
-import { sample } from "@pnpm-monorepo/sample-pkg";
+import { sample } from "@pnpm-monorepo/sample-lib";
 
 sample() satisfies { pkg: "sample" };
