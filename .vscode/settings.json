@@ -29,5 +29,13 @@
   },
   "editor.formatOnSave": true,
   "eslint.codeActionsOnSave.rules": null,
-  "prettier.enable": true
+  "prettier.enable": true,
+
+  "material-icon-theme.folders.associations": {
+    "components/primitives": "Delta",
+    ".turbo": "Archive"
+  },
+  "material-icon-theme.files.associations": {
+    "tsconfig.react.json": "Tsconfig"
+  }
 }
