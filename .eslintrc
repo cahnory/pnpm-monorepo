@@ -9,6 +9,7 @@
     "prettier"
   ],
   "overrides": [
+    // TypeScript override
     {
       "extends": [
         "plugin:import/typescript",
@@ -34,6 +35,24 @@
         "no-use-before-define": "off",
         // disabled in favor of "@typescript-eslint/sort-type-constituents"
         "perfectionist/sort-union-types": ["off"]
+      }
+    },
+    // React override
+    {
+      "files": ["**/*.[tj]sx"],
+      "extends": [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:react-hooks/recommended"
+      ],
+      "plugins": ["react", "react-hooks"],
+      "rules": {
+        "react-hooks/exhaustive-deps": "error"
+      },
+      "settings": {
+        "react": {
+          "version": "detect"
+        }
       }
     }
   ],
