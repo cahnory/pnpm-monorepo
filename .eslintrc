@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/eslintrc",
   "env": {
     "es2021": true
   },
@@ -25,9 +26,14 @@
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/sort-type-constituents": "error",
+        // disabled in favor of "@typescript-eslint/dot-notation"
         "dot-notation": "off",
+        // added marker for TypeScripe's triple-slash directives
         "spaced-comment": ["error", "always", { "markers": ["/"] }],
-        "no-use-before-define": "off"
+        // disabled in favor of "@typescript-eslint/no-use-before-define"
+        "no-use-before-define": "off",
+        // disabled in favor of "@typescript-eslint/sort-type-constituents"
+        "perfectionist/sort-union-types": ["off"]
       }
     }
   ],
@@ -38,6 +44,10 @@
   "plugins": ["perfectionist", "prettier", "import"],
   "reportUnusedDisableDirectives": true,
   "rules": {
+    "perfectionist/sort-imports": ["warn"],
+    "perfectionist/sort-named-imports": ["warn"],
+    "perfectionist/sort-objects": ["warn"],
+    "perfectionist/sort-object-types": ["warn"],
     "array-callback-return": [
       "error",
       { "allowImplicit": true, "checkForEach": true }
@@ -64,7 +74,7 @@
     "import/export": "error",
     "import/named": "error",
     "import/namespace": "error",
-    "import/newline-after-import": "error",
+    "import/newline-after-import": "warn",
     "import/no-absolute-path": "error",
     "import/no-anonymous-default-export": "error",
     "import/no-cycle": "error",
@@ -105,12 +115,13 @@
     "no-array-constructor": "error",
     "no-await-in-loop": "error",
     "no-caller": "error",
-    "no-confusing-arrow": "error",
+    // conflitcs with prettier/prettier
+    "no-confusing-arrow": "off",
     "no-console": ["error", { "allow": ["error"] }],
     "no-constant-binary-expression": "error",
     "no-constructor-return": "error",
     "no-continue": "error",
-    "no-else-return": "error",
+    "no-else-return": ["warn", { "allowElseIf": false }],
     "no-empty-function": "error",
     "no-eval": "error",
     "no-extend-native": "error",
@@ -187,7 +198,6 @@
         "enforceForRenamedProperties": false
       }
     ],
-    "prefer-exponentiation-operator": "off",
     "prefer-named-capture-group": "off",
     "prefer-numeric-literals": "off",
     "prefer-object-has-own": "error",
@@ -197,7 +207,7 @@
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "prettier/prettier": "error",
+    "prettier/prettier": "warn",
     "quote-props": ["error", "as-needed"],
     "radix": "error",
     "require-atomic-updates": "error",
