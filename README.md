@@ -47,7 +47,7 @@ On the other hand, the packages residing in the "libs" directory are specificall
 
 To add a new app:
 
-1. duplicate the _@pnpm-monorepo/sample-app_ package found in the "apps/sample" directory.
+1. duplicate the _@pnpm-monorepo/node-sample-app_ package found in the "apps/node-sample" directory.
 
 2. Rename the duplicated package to your desired new package name.
 

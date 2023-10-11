@@ -45,7 +45,7 @@ importers:
         specifier: ^1.10.15
         version: 1.10.15
 
-  apps/sample:
+  apps/node-sample:
     dependencies:
       '@pnpm-monorepo/sample-lib':
         specifier: workspace:*
