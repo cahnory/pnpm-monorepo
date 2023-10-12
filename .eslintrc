@@ -23,17 +23,20 @@
       "plugins": ["@typescript-eslint"],
       "rules": {
         "@typescript-eslint/consistent-type-imports": "error",
+        // Avoid cases where the linter allows both top-level and inline type qualifier
+        // Enforce explicit side effect imports
+        "@typescript-eslint/no-import-type-side-effects": "error",
         "@typescript-eslint/dot-notation": "error",
         "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/sort-type-constituents": "error",
-        // disabled in favor of "@typescript-eslint/dot-notation"
+        // Disabled in favor of "@typescript-eslint/dot-notation"
         "dot-notation": "off",
-        // added marker for TypeScripe's triple-slash directives
+        // Added option.markers allowing TypeScripe's triple-slash directives
         "spaced-comment": ["error", "always", { "markers": ["/"] }],
-        // disabled in favor of "@typescript-eslint/no-use-before-define"
+        // Disabled in favor of "@typescript-eslint/no-use-before-define"
         "no-use-before-define": "off",
-        // disabled in favor of "@typescript-eslint/sort-type-constituents"
+        // Disabled in favor of "@typescript-eslint/sort-type-constituents"
         "perfectionist/sort-union-types": ["off"]
       }
     },
@@ -134,7 +137,7 @@
     "no-array-constructor": "error",
     "no-await-in-loop": "error",
     "no-caller": "error",
-    // conflitcs with prettier/prettier
+    // Conflitcs with prettier/prettier
     "no-confusing-arrow": "off",
     "no-console": ["error", { "allow": ["error"] }],
     "no-constant-binary-expression": "error",
