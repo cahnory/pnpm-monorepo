@@ -5,6 +5,9 @@
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -28,6 +31,7 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
+  "eslint.format.enable": true,
   "eslint.codeActionsOnSave.rules": null,
   "prettier.enable": true,
 
