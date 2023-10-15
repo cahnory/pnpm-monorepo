@@ -41,5 +41,11 @@
   },
   "material-icon-theme.files.associations": {
     "tsconfig.react.json": "Tsconfig"
-  }
+  },
+
+  "reader-mode.auto.glob": [
+    "**/node_modules/**",
+    "**/apps/*/build/**",
+    "**/libs/*/build/**"
+  ]
 }
