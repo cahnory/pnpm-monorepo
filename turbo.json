@@ -13,5 +13,14 @@
     "test:lint": {},
     "test:types": {},
     "test:unit": {}
-  }
+  },
+  "globalDependencies": [
+    ".eslintrc",
+    ".prettierrc",
+    "tsconfig.base.json",
+    "tsconfig.react.json",
+
+    "@(apps|libs)/tsconfig.json",
+    "@(apps|libs)/.eslintignore"
+  ]
 }
