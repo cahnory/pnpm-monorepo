@@ -24,6 +24,8 @@ Template for Monorepo with PNPm, TypeScript, ESLint, Prettier, and TurboRepo.
     - [3.2.7. test:commit](#327-testcommit)
     - [3.2.8. test:rebase](#328-testrebase)
 - [4. VSCode integration](#4-vscode-integration)
+  - [Recommended extensions](#recommended-extensions)
+    - [Reader Mode](#reader-mode)
 - [5. Troubleshooting](#5-troubleshooting)
   - [5.1. IDE issues or project malfunctioning? Try `pnpm prepare`!](#51-ide-issues-or-project-malfunctioning-try-pnpm-prepare)
   - [5.2. Unable to resolve path to module… eslint("import/no-unresolved")](#52-unable-to-resolve-path-to-module-eslintimportno-unresolved)
@@ -157,7 +159,25 @@ The _test:rebase_ script examines whether a rebase with the remote default branc
 
 The monorepo includes a VSCode configuration file that optimizes code formatting and enables automatic formatting upon saving files. Additionally, a curated list of recommended extensions is provided, including tools and language-specific extensions essential for code formatting and linting. By utilizing this configuration and installing the recommended extensions, developers can ensure consistent code style and enhance productivity within the monorepo.
 
+### Recommended extensions
+
 To view the recommended extensions for the monorepo, paste **workbench.extensions.action.showRecommendedExtensions** in the command launcher (**F1**). This will open the Recommended Extensions view, where you can see the curated list of extensions. From there, you can easily install any missing extensions.
+
+#### Reader Mode
+
+_Reader Mode_ allows you to set specific files to read-only mode, preventing inadvertent modifications.
+
+By default, the [configuration](./.vscode/settings.json) includes patterns targeting files and directories commonly generated during development, like "node_modules" and "build" directories for both apps and libraries:
+
+```json
+  "reader-mode.auto.glob": [
+    "**/node_modules/**",
+    "**/apps/*/build/**",
+    "**/libs/*/build/**"
+  ]
+```
+
+Extend this list to safeguard additional files as needed.
 
 ## 5. Troubleshooting
 
