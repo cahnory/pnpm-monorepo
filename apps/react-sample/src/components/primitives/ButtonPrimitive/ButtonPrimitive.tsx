@@ -8,11 +8,11 @@ type MixedRef = ForwardedRef<HTMLAnchorElement & HTMLButtonElement>;
 
 type AnchorProps = Omit<ComponentProps<"a">, "ref"> & {
   href: string;
-  ref: AnchorRef | MixedRef;
+  ref?: AnchorRef | MixedRef | undefined;
 };
 type ButtonProps = Omit<ComponentProps<"button">, "ref"> & {
   href?: undefined;
-  ref: ButtonRef | MixedRef;
+  ref?: ButtonRef | MixedRef | undefined;
 };
 
 type ButtonPrimitiveProps = AnchorProps | ButtonProps;
