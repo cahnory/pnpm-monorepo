@@ -179,7 +179,8 @@
     "no-lone-blocks": "error",
     "no-lonely-if": "error",
     "no-loop-func": "error",
-    "no-mixed-operators": "error",
+    // Conflitcs with prettier/prettier
+    "no-mixed-operators": "off",
     "no-multi-assign": "error",
     "no-negated-condition": "error",
     "no-nested-ternary": "error",
