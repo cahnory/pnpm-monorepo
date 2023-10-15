@@ -1,0 +1,51 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version:
+          - 18.x
+          - 20.x
+
+    steps:
+      - name: Checkout to ${{ github.ref }}
+        uses: actions/checkout@v4
+      - name: Install pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: ^8.6.2
+      - name: Install node ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: "pnpm"
+      - name: Install dependencies
+        run: pnpm install --ignore-scripts
+      - name: Build
+        run: pnpm build
+      - name: Lint
+        run: pnpm test:lint
+        if: always()
+      - name: Type check
+        run: pnpm test:types
+        if: always()
+      - name: Unit test
+        run: pnpm test:unit
+        if: always()
+      - name: Commit lint
+        run: pnpm test:commit
+        if: always()
