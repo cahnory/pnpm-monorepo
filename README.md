@@ -24,9 +24,9 @@ Template for Monorepo with PNPm, TypeScript, ESLint, Prettier, and TurboRepo.
     - [3.2.7. test:commit](#327-testcommit)
     - [3.2.8. test:rebase](#328-testrebase)
 - [4. VSCode integration](#4-vscode-integration)
-  - [Recommended extensions](#recommended-extensions)
-    - [Reader Mode](#reader-mode)
-  - [Ensuring consistent VSCode configuration across packages](#ensuring-consistent-vscode-configuration-across-packages)
+  - [4.1. Recommended extensions](#41-recommended-extensions)
+    - [4.1.1. Reader Mode](#411-reader-mode)
+  - [4.2. Ensuring consistent VSCode configuration across packages](#42-ensuring-consistent-vscode-configuration-across-packages)
 - [5. Troubleshooting](#5-troubleshooting)
   - [5.1. IDE issues or project malfunctioning? Try `pnpm prepare`!](#51-ide-issues-or-project-malfunctioning-try-pnpm-prepare)
   - [5.2. Unable to resolve path to module… eslint("import/no-unresolved")](#52-unable-to-resolve-path-to-module-eslintimportno-unresolved)
@@ -160,11 +160,11 @@ The _test:rebase_ script examines whether a rebase with the remote default branc
 
 The monorepo includes a VSCode configuration file that optimizes code formatting and enables automatic formatting upon saving files. Additionally, a curated list of recommended extensions is provided, including tools and language-specific extensions essential for code formatting and linting. By utilizing this configuration and installing the recommended extensions, developers can ensure consistent code style and enhance productivity within the monorepo.
 
-### Recommended extensions
+### 4.1. Recommended extensions
 
 To view the recommended extensions for the monorepo, paste **workbench.extensions.action.showRecommendedExtensions** in the command launcher (**F1**). This will open the Recommended Extensions view, where you can see the curated list of extensions. From there, you can easily install any missing extensions.
 
-#### Reader Mode
+#### 4.1.1. Reader Mode
 
 _Reader Mode_ allows you to set specific files to read-only mode, preventing inadvertent modifications.
 
@@ -180,7 +180,7 @@ By default, the [configuration](./.vscode/settings.json) includes patterns targe
 
 Extend this list to safeguard additional files as needed.
 
-### Ensuring consistent VSCode configuration across packages
+### 4.2. Ensuring consistent VSCode configuration across packages
 
 Each package contains a symbolic link `./vscode` that points to the root-level `./vscode` directory within the monorepo. This ensures that even if you open an individual package directly in VSCode (as opposed to opening the entire monorepo), you'll have a consistent VSCode configuration. This approach provides a uniform development environment across packages, reducing potential configuration discrepancies.
 
