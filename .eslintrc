@@ -13,7 +13,7 @@
     {
       "extends": [
         "plugin:import/typescript",
-        "plugin:@typescript-eslint/recommended"
+        "plugin:@typescript-eslint/strict-type-checked"
       ],
       "files": ["**/*.ts?(x)"],
       "parser": "@typescript-eslint/parser",
@@ -23,33 +23,51 @@
       "plugins": ["@typescript-eslint"],
       "rules": {
         "@typescript-eslint/consistent-type-imports": "error",
+        "@typescript-eslint/dot-notation": "error",
+        "@typescript-eslint/no-explicit-any": "error",
         // Avoid cases where the linter allows both top-level and inline type qualifier
         // Enforce explicit side effect imports
         "@typescript-eslint/no-import-type-side-effects": "error",
-        "@typescript-eslint/dot-notation": "error",
-        "@typescript-eslint/no-explicit-any": "error",
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/sort-type-constituents": "error",
         // Disabled in favor of "@typescript-eslint/dot-notation"
         "dot-notation": "off",
-        // Added option.markers allowing TypeScripe's triple-slash directives
-        "spaced-comment": ["error", "always", { "markers": ["/"] }],
         // Disabled in favor of "@typescript-eslint/no-use-before-define"
         "no-use-before-define": "off",
         // Disabled in favor of "@typescript-eslint/sort-type-constituents"
-        "perfectionist/sort-union-types": ["off"]
+        "perfectionist/sort-union-types": ["off"],
+        // Added option.markers allowing TypeScripe's triple-slash directives
+        "spaced-comment": ["error", "always", { "markers": ["/"] }]
       }
     },
     // React override
     {
-      "files": ["**/*.[tj]sx"],
       "extends": [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
         "plugin:react-hooks/recommended"
       ],
+      "files": ["**/*.[tj]sx"],
       "plugins": ["react", "react-hooks"],
       "rules": {
+        "react/hook-use-state": ["warn"],
+        "react/iframe-missing-sandbox": ["error"],
+        "react/jsx-boolean-value": ["warn"],
+        "react/jsx-curly-brace-presence": ["warn"],
+        "react/jsx-fragments": ["warn"],
+        // TO TEST : "react/jsx-handler-names"
+        "react/jsx-no-constructed-context-values": ["error"],
+        "react/jsx-no-leaked-render": [
+          "error",
+          { "validStrategies": ["coerce", "ternary"] }
+        ],
+        "react/jsx-pascal-case": ["warn"],
+        "react/no-array-index-key": ["error"],
+        "react/no-danger": ["error"],
+        "react/no-object-type-as-default-prop": ["error"],
+        "react/no-unstable-nested-components": ["error"],
+        "react/self-closing-comp": ["warn"],
+        "react/void-dom-elements-no-children": ["error"],
         "react-hooks/exhaustive-deps": "error"
       },
       "settings": {
@@ -66,10 +84,6 @@
   "plugins": ["perfectionist", "prettier", "import"],
   "reportUnusedDisableDirectives": true,
   "rules": {
-    "perfectionist/sort-imports": ["warn"],
-    "perfectionist/sort-named-imports": ["warn"],
-    "perfectionist/sort-objects": ["warn"],
-    "perfectionist/sort-object-types": ["warn"],
     "array-callback-return": [
       "error",
       { "allowImplicit": true, "checkForEach": true }
@@ -200,6 +214,15 @@
     "no-void": "error",
     "object-shorthand": ["error", "properties"],
     "operator-assignment": ["error", "always"],
+    "perfectionist/sort-imports": ["warn"],
+    "perfectionist/sort-named-imports": ["warn"],
+    "perfectionist/sort-objects": [
+      "warn",
+      {
+        "partition-by-comment": "Part:**"
+      }
+    ],
+    "perfectionist/sort-object-types": ["warn"],
     "prefer-arrow-callback": [
       "error",
       {
