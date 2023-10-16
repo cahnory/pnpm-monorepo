@@ -28,10 +28,8 @@
         // Avoid cases where the linter allows both top-level and inline type qualifier
         // Enforce explicit side effect imports
         "@typescript-eslint/no-import-type-side-effects": "error",
-        "@typescript-eslint/no-unused-vars": [
-          "warn",
-          { "argsIgnorePattern": "^_" }
-        ],
+        // Disabled in favor of "unused-imports/no-unused-vars"
+        "@typescript-eslint/no-unused-vars": "off",
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/sort-type-constituents": "error",
         // Disabled in favor of "@typescript-eslint/dot-notation"
@@ -85,7 +83,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["perfectionist", "prettier", "import"],
+  "plugins": ["perfectionist", "prettier", "import", "unused-imports"],
   "reportUnusedDisableDirectives": true,
   "rules": {
     "array-callback-return": [
@@ -208,6 +206,8 @@
     "no-unreachable-loop": "error",
     "no-unused-expressions": "error",
     "no-unused-private-class-members": "error",
+    // Disabled in favor of "unused-imports/no-unused-vars"
+    "no-unused-vars": "off",
     "no-use-before-define": ["error", { "variables": false }],
     "no-useless-call": "error",
     "no-useless-computed-key": "error",
@@ -265,6 +265,15 @@
     "sort-vars": "error",
     "spaced-comment": ["error", "always"],
     "symbol-description": "error",
+    "unused-imports/no-unused-imports": "warn",
+    "unused-imports/no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "argsIgnorePattern": "^_",
+        "vars": "all"
+      }
+    ],
     "vars-on-top": "error",
     "yoda": ["error", "never"]
   },
