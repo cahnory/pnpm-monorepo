@@ -38,11 +38,11 @@ type ForwardConditionalRefComponent<T extends ForwardConditionalRefVariant[]> =
 export const forwardConditionalRef = <
   CP extends ForwardConditionalRefVariant[],
 >(
-  cb: (
+  render: (
     props: ForwardConditionalRefProps<CP>,
     ref: ForwardedRef<ForwardConditionalRefRefs<CP>>,
   ) => ReactNode,
 ) =>
   forwardRef<ForwardConditionalRefRefs<CP>, ForwardConditionalRefProps<CP>>(
-    cb,
+    render,
   ) as ForwardConditionalRefComponent<CP>;
