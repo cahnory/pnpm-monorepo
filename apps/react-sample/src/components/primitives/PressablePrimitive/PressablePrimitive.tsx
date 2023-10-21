@@ -15,12 +15,12 @@ type ButtonProps = Omit<ComponentProps<"button">, "ref"> & {
   ref?: ButtonRef | MixedRef | undefined;
 };
 
-type ButtonPrimitiveProps = AnchorProps | ButtonProps;
+type PressablePrimitiveProps = AnchorProps | ButtonProps;
 
 export const ButtonPrimitive = forwardRef<
   HTMLAnchorElement & HTMLButtonElement,
-  ButtonPrimitiveProps
->(function renderButtonPrimitive(props, ref) {
+  PressablePrimitiveProps
+>(function PressablePrimitiveForwardedRef(props, ref) {
   return props.href === undefined ? (
     <button {...props} ref={ref} />
   ) : (
