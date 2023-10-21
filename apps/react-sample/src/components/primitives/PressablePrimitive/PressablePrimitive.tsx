@@ -1,32 +1,19 @@
-import type { ComponentProps, ForwardedRef, ReactElement } from "react";
+import { type ComponentPropsWithoutRef, forwardRef } from "react";
 
-import { forwardRef } from "react";
-
-type AnchorRef = ForwardedRef<HTMLAnchorElement | undefined>;
-type ButtonRef = ForwardedRef<HTMLButtonElement | undefined>;
-type MixedRef = ForwardedRef<HTMLAnchorElement & HTMLButtonElement>;
-
-type AnchorProps = Omit<ComponentProps<"a">, "ref"> & {
+type AnchorProps = Omit<ComponentPropsWithoutRef<"a">, "href"> & {
   href: string;
-  ref?: AnchorRef | MixedRef | undefined;
 };
-type ButtonProps = Omit<ComponentProps<"button">, "ref"> & {
+type ButtonProps = ComponentPropsWithoutRef<"button"> & {
   href?: undefined;
-  ref?: ButtonRef | MixedRef | undefined;
 };
 
-type PressablePrimitiveProps = AnchorProps | ButtonProps;
-
-export const ButtonPrimitive = forwardRef<
+export const PressablePrimitive = forwardRef<
   HTMLAnchorElement & HTMLButtonElement,
-  PressablePrimitiveProps
+  AnchorProps | ButtonProps
 >(function PressablePrimitiveForwardedRef(props, ref) {
-  return props.href === undefined ? (
-    <button {...props} ref={ref} />
-  ) : (
-    <a {...props} ref={ref} />
-  );
-}) as {
-  (props: AnchorProps): ReactElement<AnchorProps, "a">;
-  (props: ButtonProps): ReactElement<ButtonProps, "button">;
-};
+  if (props.href === undefined) {
+    return <button {...props} ref={ref} />;
+  }
+
+  return <a {...props} ref={ref} />;
+});
