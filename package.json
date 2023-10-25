@@ -10,12 +10,16 @@
     ]
   },
   "config": {
+    "commitizen": {
+      "path": "@commitlint/cz-commitlint"
+    },
     "defaultBranch": "main"
   },
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "prepare": "pnpm build",
     "build": "turbo run build",
+    "commit": "cz",
     "dev": "turbo run dev",
     "test": "turbo run test --continue --output-logs=errors-only ; pnpm test:commit ; pnpm test:rebase",
     "test:lint": "turbo run test:lint --continue --output-logs=errors-only",
@@ -27,7 +31,9 @@
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
+    "@commitlint/cz-commitlint": "^18.0.0",
     "@typescript-eslint/eslint-plugin": "^6.7.5",
+    "commitizen": "^4.3.0",
     "eslint": "^8.51.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-import-resolver-exports": "1.0.0-beta.5",

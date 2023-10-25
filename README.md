@@ -16,13 +16,14 @@ Template for Monorepo with PNPm, TypeScript, ESLint, Prettier, and TurboRepo.
     - [3.1.6. test:unit](#316-testunit)
   - [3.2. Root-Level scripts](#32-root-level-scripts)
     - [3.2.1. build](#321-build)
-    - [3.2.2. dev](#322-dev)
-    - [3.2.3. test](#323-test)
-    - [3.2.4. test:lint](#324-testlint)
-    - [3.2.5. test:types](#325-testtypes)
-    - [3.2.6. test:unit](#326-testunit)
-    - [3.2.7. test:commit](#327-testcommit)
-    - [3.2.8. test:rebase](#328-testrebase)
+    - [3.2.2. commit](#322-commit)
+    - [3.2.3. dev](#323-dev)
+    - [3.2.4. test](#324-test)
+    - [3.2.5. test:lint](#325-testlint)
+    - [3.2.6. test:types](#326-testtypes)
+    - [3.2.7. test:unit](#327-testunit)
+    - [3.2.8. test:commit](#328-testcommit)
+    - [3.2.9. test:rebase](#329-testrebase)
 - [4. VSCode integration](#4-vscode-integration)
   - [4.1. Recommended extensions](#41-recommended-extensions)
     - [4.1.1. Reader Mode](#411-reader-mode)
@@ -126,33 +127,37 @@ The monorepo also includes root-level scripts with similar functionality as thei
 
 Run the _build_ script for all packages within the monorepo.
 
-#### 3.2.2. dev
+#### 3.2.2. commit
+
+Commt using [commitizen](https://commitizen.github.io/cz-cli/). Get instant feedback on your commit message formatting and be prompted for required fields
+
+#### 3.2.3. dev
 
 Run the _dev_ script for all packages within the monorepo.
 
-#### 3.2.3. test
+#### 3.2.4. test
 
 Run the _test_ script on all packages within the monorepo followed by the root scripts test:commit and test:rebase.
 
-#### 3.2.4. test:lint
+#### 3.2.5. test:lint
 
 Run the _test:lint_ script for all packages within the monorepo.
 
-#### 3.2.5. test:types
+#### 3.2.6. test:types
 
 Run the _test:types_ script for all packages within the monorepo.
 
-#### 3.2.6. test:unit
+#### 3.2.7. test:unit
 
 Run the _test:unit_ script for all packages within the monorepo.
 
-#### 3.2.7. test:commit
+#### 3.2.8. test:commit
 
 The "test:commit" script verifies the commit messages of the commits added by the current branch using the commitlint library. It performs linting or checks against predefined rules, specified in the commitlint configuration, to ensure that the commit messages follow specific guidelines or standards. This helps maintain consistency and clarity in the commit history of the project.
 
 You can learn more about commitlint by visiting the [official commitlint documentation](https://commitlint.js.org/).
 
-#### 3.2.8. test:rebase
+#### 3.2.9. test:rebase
 
 The _test:rebase_ script examines whether a rebase with the remote default branch is necessary. It analyzes the current branch's changes and compares them with the default branch in the remote repository. This check helps identify if the current branch is outdated or needs to be updated to incorporate the latest changes from the default branch. Performing the necessary rebase ensures that the branch remains up to date and avoids potential conflicts during future merges or pull requests.
 
