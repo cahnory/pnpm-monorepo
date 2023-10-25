@@ -33,6 +33,7 @@
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "eslint.codeActionsOnSave.rules": null,
+  "eslint.workingDirectories": [{ "mode": "auto" }],
   "prettier.enable": true,
 
   "material-icon-theme.folders.associations": {
