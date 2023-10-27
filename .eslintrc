@@ -18,7 +18,8 @@
       "files": ["**/*.ts?(x)"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
-        "project": true
+        "project": true,
+        "EXPERIMENTAL_useProjectService": true
       },
       "plugins": ["@typescript-eslint"],
       "rules": {
@@ -78,6 +79,19 @@
         "react": {
           "version": "detect"
         }
+      }
+    },
+    // Development override
+    {
+      "files": ["**/vite.config.ts"],
+      "rules": {
+        "import/no-extraneous-dependencies": [
+          "error",
+          {
+            "devDependencies": true,
+            "optionalDependencies": false
+          }
+        ]
       }
     }
   ],
