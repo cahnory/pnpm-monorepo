@@ -2,6 +2,8 @@
   "extends": "../../tsconfig.react.json",
   "include": ["src/**/*"],
   "compilerOptions": {
-    "outDir": "build"
+    "composite": true,
+    "outDir": "build",
+    "rootDir": "src"
   }
 }

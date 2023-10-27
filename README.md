@@ -67,7 +67,7 @@ To add a new app:
 
 To add a new lib:
 
-1. duplicate the _@pnpm-monorepo/sample-lib_ package found in the "libs/sample" directory.
+1. duplicate one of the sample lib package found in the "libs" directory.
 
 2. Rename the duplicated package to your desired new package name.
 
