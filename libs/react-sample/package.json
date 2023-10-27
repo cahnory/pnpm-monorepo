@@ -1,5 +1,5 @@
 {
-  "name": "@pnpm-monorepo/react-sample-app",
+  "name": "@pnpm-monorepo/react-sample-lib",
   "version": "0.0.1",
   "private": true,
   "license": "UNLICENSED",
@@ -13,8 +13,7 @@
     "test:types": "tsc --noEmit",
     "test:unit": "echo \"Warning: no test specified\" && exit 0"
   },
-  "dependencies": {
-    "@pnpm-monorepo/sample-lib": "workspace:*",
+  "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

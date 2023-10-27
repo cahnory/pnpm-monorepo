@@ -70,11 +70,8 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  apps/react-sample:
+  libs/react-sample:
     dependencies:
-      '@pnpm-monorepo/sample-lib':
-        specifier: workspace:*
-        version: link:../../libs/sample
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -1238,7 +1235,7 @@ packages:
       longest: 2.0.1
       word-wrap: 1.2.5
     optionalDependencies:
-      '@commitlint/load': 17.7.2
+      '@commitlint/load': 18.0.0
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'

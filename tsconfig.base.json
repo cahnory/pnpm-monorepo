@@ -24,6 +24,7 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "paths": {
+      "@pnpm-monorepo/react-sample-lib": ["./libs/react-sample"],
       "@pnpm-monorepo/sample-lib": ["./libs/sample"]
     },
     "preserveSymlinks": true,
