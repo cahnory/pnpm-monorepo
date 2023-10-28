@@ -41,6 +41,7 @@
     ".turbo": "Archive"
   },
   "material-icon-theme.files.associations": {
+    "*.css.ts": "Css",
     "tsconfig.react.json": "Tsconfig"
   },
 
