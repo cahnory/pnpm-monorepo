@@ -1,3 +1,4 @@
+import { Button } from "@pnpm-monorepo/react-sample-lib/build/components/custom/Button/Button";
 import { useState } from "react";
 
 export const App = () => {
@@ -12,13 +13,13 @@ export const App = () => {
       </h1>
 
       <div>
-        <button
+        <Button
           onClick={() => {
             setCount((prevCount) => prevCount + 1);
           }}
         >
           count is {count}
-        </button>
+        </Button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
