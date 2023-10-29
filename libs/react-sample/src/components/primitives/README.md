@@ -1,6 +1,6 @@
 # Primitive components
 
-The "primitives" folder contains exclusively headless React components designed for handling core functionality and logic, without any predefined user interface or visual rendering.
+The "primitives" folder exclusively contains headless React components designed for handling core functionality and logic, without any predefined user interface or visual rendering.
 
 ## Conventions
 
