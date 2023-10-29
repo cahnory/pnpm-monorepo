@@ -80,19 +80,6 @@
           "version": "detect"
         }
       }
-    },
-    // Development override
-    {
-      "files": ["**/vite.config.ts"],
-      "rules": {
-        "import/no-extraneous-dependencies": [
-          "error",
-          {
-            "devDependencies": true,
-            "optionalDependencies": false
-          }
-        ]
-      }
     }
   ],
   "parserOptions": {
