@@ -79,18 +79,6 @@ To add a new lib:
    }
    ```
 
-4. Include a path reference for the package in the root-level "tsconfig.base.json" file. To do this, add a new property to the "paths" object within the "compilerOptions" section. Use the name of the package as the key and provide an array with the path to the package as the corresponding value:
-
-   ```json
-   {
-     "compilerOptions": {
-       "paths": {
-         "@pnpm-monorepo/<new-package>": ["./libs/<new-package-name>"]
-       }
-     }
-   }
-   ```
-
 ## 3. Scripts
 
 ### 3.1. Package scripts
