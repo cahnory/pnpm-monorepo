@@ -1,4 +1,4 @@
-import { Button } from "@pnpm-monorepo/react-sample-lib/build/components/custom/Button/Button";
+import { Button } from "@pnpm-monorepo/react-sample-lib/components/custom/Button/Button";
 import { useState } from "react";
 
 export const App = () => {

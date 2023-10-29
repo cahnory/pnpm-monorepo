@@ -3,8 +3,17 @@
   "version": "0.0.1",
   "private": true,
   "license": "UNLICENSED",
-  "main": "build/index.js",
-  "types": "build/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/index.js",
+      "types": "./build/index.d.ts"
+    },
+    "./*": {
+      "import": "./build/*.js",
+      "types": "./build/*.d.ts"
+    }
+  },
   "scripts": {
     "build": "rm -rf ./build && tsc --build --force",
     "dev": "rm -f ./tsconfig.tsbuildinfo && tsc --watch",

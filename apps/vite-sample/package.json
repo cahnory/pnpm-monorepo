@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "license": "UNLICENSED",
+  "type": "module",
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {

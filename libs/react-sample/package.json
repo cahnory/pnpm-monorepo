@@ -3,6 +3,13 @@
   "version": "0.0.1",
   "private": true,
   "license": "UNLICENSED",
+  "type": "module",
+  "exports": {
+    "./*": {
+      "import": "./build/*.js",
+      "types": "./build/*.d.ts"
+    }
+  },
   "scripts": {
     "build": "rm -rf ./build && tsc --build --force",
     "dev": "rm -f ./tsconfig.tsbuildinfo && tsc --watch",

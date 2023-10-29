@@ -295,8 +295,14 @@
     "yoda": ["error", "never"]
   },
   "settings": {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
     "import/resolver": {
-      "exports": {}
+      "typescript": {
+        "alwaysTryTypes": true,
+        "project": ["apps/*/tsconfig.json", "libs/*/tsconfig.json"]
+      }
     }
   }
 }
