@@ -2,7 +2,9 @@
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Base",
   "compilerOptions": {
-    "allowUnreachableCode": false,
+    // Stop TypeScript from aggressively deleting unreachable code
+    // and let ESLint warn about it (no-unreachable rule)
+    "allowUnreachableCode": true,
     "allowUnusedLabels": false,
     "checkJs": true,
     "composite": false,

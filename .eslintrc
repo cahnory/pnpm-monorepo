@@ -34,6 +34,8 @@
         "@typescript-eslint/sort-type-constituents": "error",
         // Disabled in favor of "@typescript-eslint/dot-notation"
         "dot-notation": "off",
+        // Disabled by typescript-eslint
+        "no-unreachable": "warn",
         // Disabled in favor of "@typescript-eslint/no-use-before-define"
         "no-use-before-define": "off",
         // Disabled in favor of "@typescript-eslint/sort-type-constituents"
@@ -203,6 +205,7 @@
     "no-underscore-dangle": ["error", { "allow": ["__webpack_public_path__"] }],
     "no-unmodified-loop-condition": "error",
     "no-unneeded-ternary": "error",
+    "no-unreachable": "error",
     "no-unreachable-loop": "error",
     "no-unused-expressions": "error",
     "no-unused-private-class-members": "error",
