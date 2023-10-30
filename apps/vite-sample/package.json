@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "@pnpm-monorepo/vite-sample-app",
   "version": "0.0.1",
   "private": true,
