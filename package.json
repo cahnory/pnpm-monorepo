@@ -27,8 +27,8 @@
     "test:lint": "turbo run test:lint --continue --output-logs=errors-only",
     "test:types": "turbo run test:types --continue --output-logs=errors-only",
     "test:unit": "turbo run test:unit --continue --output-logs=errors-only",
-    "test:commit": "scripts/test-commit.sh $npm_package_config_defaultBranch",
-    "test:rebase": "scripts/test-rebase.sh $npm_package_config_defaultBranch"
+    "test:commit": "bash scripts/test-commit.sh $npm_package_config_defaultBranch",
+    "test:rebase": "bash scripts/test-rebase.sh $npm_package_config_defaultBranch"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.2.0",
