@@ -8,8 +8,8 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "rm -rf ./build && tsc --build --force",
-    "dev": "rm -f ./tsconfig.tsbuildinfo && tsc --watch",
+    "build": "rimraf ./build && tsc --build --force",
+    "dev": "tsc --watch",
     "test": "pnpm test:lint && pnpm test:types && pnpm test:unit",
     "test:lint": "eslint .",
     "test:types": "tsc --noEmit",
@@ -19,6 +19,7 @@
     "@pnpm-monorepo/sample-lib": "workspace:*"
   },
   "devDependencies": {
+    "rimraf": "^5.0.5",
     "typescript": "^5.2.2"
   }
 }
