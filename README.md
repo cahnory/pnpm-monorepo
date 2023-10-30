@@ -31,7 +31,6 @@ Template for Monorepo with PNPm, TypeScript, ESLint, Prettier, and TurboRepo.
 - [5. Troubleshooting](#5-troubleshooting)
   - [5.1. IDE issues or project malfunctioning? Try `pnpm prepare`!](#51-ide-issues-or-project-malfunctioning-try-pnpm-prepare)
   - [5.2. Unable to resolve path to module… eslint("import/no-unresolved")](#52-unable-to-resolve-path-to-module-eslintimportno-unresolved)
-  - [5.3. Packages types are not updated](#53-packages-types-are-not-updated)
 
 ## 1. Initialization
 
@@ -202,7 +201,3 @@ pnpm run prepare
 ```
 
 This could happen because an event such as a branch change, stash application, pull, or repository reset has occurred or if you're making modification to source files without runing the dev script.
-
-### 5.3. Packages types are not updated
-
-If you're facing difficulties with the types of a package in the monorepo not updating as expected, it's likely because the package is not referenced in the tsconfig.base.ts file. To resolve this issue, refer to the [Adding a New Lib](#22-adding-a-new-lib) section of this README, which outlines the necessary steps to add a new package to the monorepo.
