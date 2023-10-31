@@ -11,11 +11,11 @@
     "build": "tsc && vite build",
     "dev": "vite",
     "preview": "vite preview",
-    "lint": "pnpm lint:types && pnpm lint:semantic && pnpm lint:format",
+    "lint": "concurrently -r -g pnpm:lint:types pnpm:lint:semantic pnpm:lint:format",
     "lint:format": "prettier -c ./",
     "lint:semantic": "eslint ./",
     "lint:types": "tsc --noEmit",
-    "lint:fix": "pnpm lint:fix:format && pnpm lint:fix:semantic",
+    "lint:fix": "concurrently -r -g pnpm:lint:fix:format pnpm:lint:fix:semantic",
     "lint:fix:format": "prettier --write --list-different ./",
     "lint:fix:semantic": "eslint ./ --fix",
     "test": "pnpm test:unit",
@@ -32,6 +32,9 @@
     "@types/react-dom": "^18.2.13",
     "@vanilla-extract/vite-plugin": "^3.9.0",
     "@vitejs/plugin-react-swc": "^3.3.2",
+    "eslint": "^8.52.0",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2",
     "vite": "^4.4.5"
   }
