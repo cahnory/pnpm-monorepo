@@ -9,9 +9,14 @@
       "cache": false,
       "persistent": true
     },
+    "lint": {},
+    "lint:format": {},
+    "lint:semantic": {},
+    "lint:types": {},
+    "lint:fix": {},
+    "lint:fix:format": {},
+    "lint:fix:semantic": {},
     "test": {},
-    "test:lint": {},
-    "test:types": {},
     "test:unit": {}
   },
   "globalDependencies": [

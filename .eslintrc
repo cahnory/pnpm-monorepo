@@ -86,7 +86,7 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["perfectionist", "prettier", "import", "unused-imports"],
+  "plugins": ["perfectionist", "import", "unused-imports"],
   "reportUnusedDisableDirectives": true,
   "rules": {
     "array-callback-return": [
@@ -156,8 +156,6 @@
     "no-array-constructor": "error",
     "no-await-in-loop": "error",
     "no-caller": "error",
-    // Conflitcs with prettier/prettier
-    "no-confusing-arrow": "off",
     "no-console": ["error", { "allow": ["error"] }],
     "no-constant-binary-expression": "error",
     "no-constructor-return": "error",
@@ -180,8 +178,6 @@
     "no-lone-blocks": "error",
     "no-lonely-if": "error",
     "no-loop-func": "error",
-    // Conflitcs with prettier/prettier
-    "no-mixed-operators": "off",
     "no-multi-assign": "error",
     "no-negated-condition": "error",
     "no-nested-ternary": "error",
@@ -261,7 +257,6 @@
     "prefer-rest-params": "error",
     "prefer-spread": "error",
     "prefer-template": "error",
-    "prettier/prettier": "warn",
     "quote-props": ["error", "as-needed"],
     "radix": "error",
     "require-atomic-updates": "error",

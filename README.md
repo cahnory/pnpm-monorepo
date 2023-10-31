@@ -10,20 +10,30 @@ Template for Monorepo with PNPm, TypeScript, ESLint, Prettier, and TurboRepo.
   - [3.1. Package scripts](#31-package-scripts)
     - [3.1.1. build](#311-build)
     - [3.1.2. dev](#312-dev)
-    - [3.1.3. test](#313-test)
-    - [3.1.4. test:lint](#314-testlint)
-    - [3.1.5. test:types](#315-testtypes)
-    - [3.1.6. test:unit](#316-testunit)
+    - [3.1.3. lint](#313-lint)
+    - [3.1.4. lint:format](#314-lintformat)
+    - [3.1.5. lint:semantic](#315-lintsemantic)
+    - [3.1.6. lint:types](#316-linttypes)
+    - [3.1.7. lint:fix](#317-lintfix)
+    - [3.1.8. lint:fix:format](#318-lintfixformat)
+    - [3.1.9. lint:fix:semantic](#319-lintfixsemantic)
+    - [3.1.10. test](#3110-test)
+    - [3.1.11. test:unit](#3111-testunit)
   - [3.2. Root-Level scripts](#32-root-level-scripts)
     - [3.2.1. build](#321-build)
     - [3.2.2. commit](#322-commit)
     - [3.2.3. dev](#323-dev)
-    - [3.2.4. test](#324-test)
-    - [3.2.5. test:lint](#325-testlint)
-    - [3.2.6. test:types](#326-testtypes)
-    - [3.2.7. test:unit](#327-testunit)
-    - [3.2.8. test:commit](#328-testcommit)
-    - [3.2.9. test:rebase](#329-testrebase)
+    - [3.2.4. lint](#324-lint)
+    - [3.2.5. lint:format](#325-lintformat)
+    - [3.2.6. lint:semantic](#326-lintsemantic)
+    - [3.2.7. lint:types](#327-linttypes)
+    - [3.2.8. lint:commits](#328-lintcommits)
+    - [3.2.9. lint:rebase](#329-lintrebase)
+    - [3.2.10. lint:fix](#3210-lintfix)
+    - [3.2.11. lint:fix:format](#3211-lintfixformat)
+    - [3.2.12. lint:fix:semantic](#3212-lintfixsemantic)
+    - [3.2.13. test](#3213-test)
+    - [3.2.14. test:unit](#3214-testunit)
 - [4. VSCode integration](#4-vscode-integration)
   - [4.1. Recommended extensions](#41-recommended-extensions)
     - [4.1.1. Reader Mode](#411-reader-mode)
@@ -90,19 +100,39 @@ The _build_ script is used to compile the source code of the package. It generat
 
 The _dev_ script is helpful during the development phase. It allows developers to watch the package's source files for changes and automatically triggers a rebuild whenever a file is modified. This feature provides a convenient workflow by keeping the package up to date during development.
 
-#### 3.1.3. test
+#### 3.1.3. lint
 
-The _test_ script is responsible for running various tests associated with the package. It validates the functionality and quality of the package. The test script further divides its functionality into three sub-scripts: lint, types, and unit.
+The _lint_ script is responsible for running various linters associated with the package. It divides its functionality into three sub-scripts: lint:format, lint:semantic, and lint:types.
 
-#### 3.1.4. test:lint
+#### 3.1.4. lint:format
 
-The _test:lint_ script checks that the package's source code adheres to the eslint rules defined for the monorepo. It ensures consistent code style, enforces best practices, and maintains code quality throughout the package.
+The _lint:format_ script checks that the package's source code adheres to the prettier config defined for the monorepo. It ensures consistent code style throughout the package.
 
-#### 3.1.5. test:types
+#### 3.1.5. lint:semantic
 
-The _test:types_ script verifies that the package's source code is free from TypeScript type errors. It performs static type checking, ensuring type safety within the package. Running this script helps catch potential type-related issues before runtime.
+The _lint:semantic_ script checks that the package's source code adheres to the eslint rules defined for the monorepo. It enforces best practices, and maintains code quality throughout the package.
 
-#### 3.1.6. test:unit
+#### 3.1.6. lint:types
+
+The _lint:types_ script verifies that the package's source code is free from TypeScript type errors. It performs static type checking, ensuring type safety within the package. Running this script helps catch potential type-related issues before runtime.
+
+#### 3.1.7. lint:fix
+
+The _lint:fix_ script attempts to fix all linters issues.
+
+#### 3.1.8. lint:fix:format
+
+The _lint:fix:format_ script attempts to automatically corrects any formatting/stylistic issues found in the package's source code, ensuring that it adheres to the prettier config defined for the monorepo.
+
+#### 3.1.9. lint:fix:semantic
+
+The _lint:fix:semantic_ script attempts to automatically fixes any code issues that do not adhere to the eslint rules defined for the monorepo.
+
+#### 3.1.10. test
+
+The _test_ script is responsible for running various tests associated with the package. It validates the functionality and quality of the package.
+
+#### 3.1.11. test:unit
 
 The _test:unit_ script runs the package's unit tests. It validates the behavior of individual components, functions, or modules within the package. This script ensures that the package's internal units are functioning as expected.
 
@@ -122,31 +152,51 @@ Commt using [commitizen](https://commitizen.github.io/cz-cli/). Get instant feed
 
 Run the _dev_ script for all packages within the monorepo.
 
-#### 3.2.4. test
+#### 3.2.4. lint
 
-Run the _test_ script on all packages within the monorepo followed by the root scripts test:commit and test:rebase.
+Run the _lint_ script on all packages within the monorepo followed by the root scripts lint:commits and lint:rebase.
 
-#### 3.2.5. test:lint
+#### 3.2.5. lint:format
 
-Run the _test:lint_ script for all packages within the monorepo.
+Run the _lint:format_ script for all packages within the monorepo.
 
-#### 3.2.6. test:types
+#### 3.2.6. lint:semantic
 
-Run the _test:types_ script for all packages within the monorepo.
+Run the _lint:semantic_ script for all packages within the monorepo.
 
-#### 3.2.7. test:unit
+#### 3.2.7. lint:types
 
-Run the _test:unit_ script for all packages within the monorepo.
+Run the _lint:types_ script for all packages within the monorepo.
 
-#### 3.2.8. test:commit
+#### 3.2.8. lint:commits
 
-The "test:commit" script verifies the commit messages of the commits added by the current branch using the commitlint library. It performs linting or checks against predefined rules, specified in the commitlint configuration, to ensure that the commit messages follow specific guidelines or standards. This helps maintain consistency and clarity in the commit history of the project.
+The "lint:commits" script verifies the commit messages of the commits added by the current branch using the commitlint library. It performs linting or checks against predefined rules, specified in the commitlint configuration, to ensure that the commit messages follow specific guidelines or standards. This helps maintain consistency and clarity in the commit history of the project.
 
 You can learn more about commitlint by visiting the [official commitlint documentation](https://commitlint.js.org/).
 
-#### 3.2.9. test:rebase
+#### 3.2.9. lint:rebase
 
 The _test:rebase_ script examines whether a rebase with the remote default branch is necessary. It analyzes the current branch's changes and compares them with the default branch in the remote repository. This check helps identify if the current branch is outdated or needs to be updated to incorporate the latest changes from the default branch. Performing the necessary rebase ensures that the branch remains up to date and avoids potential conflicts during future merges or pull requests.
+
+#### 3.2.10. lint:fix
+
+Run the _lint:fix_ script on all packages within the monorepo.
+
+#### 3.2.11. lint:fix:format
+
+Run the _lint:fix:format_ script for all packages within the monorepo.
+
+#### 3.2.12. lint:fix:semantic
+
+Run the _lint:semantic_ script for all packages within the monorepo.
+
+#### 3.2.13. test
+
+Run the _test_ script on all packages within the monorepo.
+
+#### 3.2.14. test:unit
+
+Run the _test:unit_ script for all packages within the monorepo.
 
 ## 4. VSCode integration
 

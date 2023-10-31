@@ -18,9 +18,14 @@
   "scripts": {
     "build": "rimraf ./build && tsc --build --force",
     "dev": "rimraf ./tsconfig.tsbuildinfo && tsc --watch",
-    "test": "pnpm test:lint && pnpm test:types && pnpm test:unit",
-    "test:lint": "eslint .",
-    "test:types": "tsc --noEmit",
+    "lint": "pnpm lint:types && pnpm lint:semantic && pnpm lint:format",
+    "lint:format": "prettier -c ./",
+    "lint:semantic": "eslint ./",
+    "lint:types": "tsc --noEmit",
+    "lint:fix": "pnpm lint:fix:format && pnpm lint:fix:semantic",
+    "lint:fix:format": "prettier --write --list-different ./",
+    "lint:fix:semantic": "eslint ./ --fix",
+    "test": "pnpm test:unit",
     "test:unit": "echo \"Warning: no test specified\" && exit 0"
   },
   "devDependencies": {
