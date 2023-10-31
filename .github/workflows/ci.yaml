@@ -49,15 +49,18 @@ jobs:
         run: pnpm install --ignore-scripts
       - name: Build
         run: pnpm build
-      - name: Lint
-        run: pnpm test:lint
+      - name: Lint types
+        run: pnpm lint:types
         if: always()
-      - name: Type check
-        run: pnpm test:types
+      - name: Lint semantic
+        run: pnpm lint:semantic
+        if: always()
+      - name: Lint format
+        run: pnpm lint:format
+        if: always()
+      - name: Lint commits
+        run: pnpm lint:commits
         if: always()
       - name: Unit test
         run: pnpm test:unit
-        if: always()
-      - name: Commit lint
-        run: pnpm test:commit
         if: always()
