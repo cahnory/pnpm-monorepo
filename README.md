@@ -188,7 +188,7 @@ Run the _lint:fix:format_ script for all packages within the monorepo.
 
 #### 3.2.12. lint:fix:semantic
 
-Run the _lint:semantic_ script for all packages within the monorepo.
+Run the _lint:fix:semantic_ script for all packages within the monorepo.
 
 #### 3.2.13. test
 
