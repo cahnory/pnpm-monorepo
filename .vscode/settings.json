@@ -3,10 +3,18 @@
     "editor.defaultFormatter": "lkrms.inifmt"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "Jota0222.multi-formatter",
+    "multiFormatter.formatterList": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "Jota0222.multi-formatter",
+    "multiFormatter.formatterList": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -21,10 +29,18 @@
     "editor.defaultFormatter": "lkrms.inifmt"
   },
   "[typeScript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "Jota0222.multi-formatter",
+    "multiFormatter.formatterList": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "Jota0222.multi-formatter",
+    "multiFormatter.formatterList": [
+      "esbenp.prettier-vscode",
+      "dbaeumer.vscode-eslint"
+    ]
   },
 
   "editor.codeActionsOnSave": {

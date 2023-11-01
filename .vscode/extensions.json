@@ -3,6 +3,7 @@
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
     "lkrms.inifmt",
-    "theoolee.reader-mode"
+    "theoolee.reader-mode",
+    "Jota0222.multi-formatter"
   ]
 }
