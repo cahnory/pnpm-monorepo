@@ -57,6 +57,7 @@
   },
   "material-icon-theme.files.associations": {
     "*.css.ts": "Css",
+    "japa.unit.ts": "Test-ts",
     "tsconfig.react.json": "Tsconfig"
   },
 
