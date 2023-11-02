@@ -22,7 +22,7 @@
     "lint:fix:format": "prettier --write --list-different ./",
     "lint:fix:semantic": "eslint ./ --fix",
     "test": "pnpm test:unit",
-    "test:unit": "echo \"Warning: no test specified\" && exit 0"
+    "test:unit": "tsx japa.unit.ts"
   },
   "peerDependencies": {
     "@vanilla-extract/css": "^1.13.0",
@@ -30,6 +30,9 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@japa/expect": "3.0.0-1",
+    "@japa/runner": "3.0.0-9",
+    "@types/node": "^20.8.10",
     "@types/react": "^18.2.28",
     "@types/react-dom": "^18.2.13",
     "@vanilla-extract/css": "^1.13.0",
@@ -37,6 +40,7 @@
     "eslint": "^8.52.0",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
+    "tsx": "^3.14.0",
     "typescript": "^5.2.2"
   }
 }

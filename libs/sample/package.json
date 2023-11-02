@@ -26,13 +26,16 @@
     "lint:fix:format": "prettier --write --list-different ./",
     "lint:fix:semantic": "eslint ./ --fix",
     "test": "pnpm test:unit",
-    "test:unit": "echo \"Warning: no test specified\" && exit 0"
+    "test:unit": "tsx japa.unit.ts"
   },
   "devDependencies": {
+    "@japa/expect": "3.0.0-1",
+    "@japa/runner": "3.0.0-9",
     "eslint": "^8.52.0",
     "concurrently": "^8.2.2",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
+    "tsx": "^3.14.0",
     "typescript": "^5.2.2"
   }
 }
