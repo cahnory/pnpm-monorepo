@@ -11,6 +11,9 @@ configure({
     function vanillaExtractMockPlugin() {
       setFileScope("mock");
     },
+    function jsDomPlugin() {
+      import("global-jsdom/register");
+    },
   ],
 });
 
