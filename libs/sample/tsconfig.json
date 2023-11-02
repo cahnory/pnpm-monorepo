@@ -1,10 +1,5 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "extends": "../../tsconfig.base.json",
-  "include": ["src"],
-  "compilerOptions": {
-    "composite": true,
-    "outDir": "build",
-    "rootDir": "src"
-  }
+  "exclude": ["build"]
 }

@@ -8,8 +8,8 @@
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
-    "build": "rimraf ./build && tsc --build --force",
-    "dev": "tsc --watch",
+    "build": "rimraf ./build && tsc --build --force tsconfig.build.json",
+    "dev": "tsc -p tsconfig.build.json --watch",
     "lint": "concurrently -r -g pnpm:lint:types pnpm:lint:semantic pnpm:lint:format",
     "lint:format": "prettier -c ./",
     "lint:semantic": "eslint ./",
