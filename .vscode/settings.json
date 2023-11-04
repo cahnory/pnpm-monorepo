@@ -47,10 +47,10 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
-  "eslint.format.enable": true,
+  "eslint.format.enable": false,
   "eslint.codeActionsOnSave.rules": null,
   "eslint.workingDirectories": [{ "mode": "auto" }],
-  "prettier.enable": true,
+  "prettier.enable": false,
 
   "material-icon-theme.folders.associations": {
     "components/primitives": "Delta",
