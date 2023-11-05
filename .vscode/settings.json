@@ -28,7 +28,7 @@
   "[properties]": {
     "editor.defaultFormatter": "lkrms.inifmt"
   },
-  "[typeScript]": {
+  "[typescript]": {
     "editor.defaultFormatter": "Jota0222.multi-formatter",
     "multiFormatter.formatterList": [
       "esbenp.prettier-vscode",
