@@ -30,8 +30,8 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@japa/expect": "3.0.0-1",
-    "@japa/runner": "3.0.0-9",
+    "@japa/expect": "3.0.0",
+    "@japa/runner": "3.0.5",
     "@testing-library/react": "^14.0.0",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.28",
