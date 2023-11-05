@@ -5,7 +5,12 @@ processCLIArgs(process.argv.splice(2));
 configure({
   files: ["src/**/*.spec.ts?(x)"],
   importer: (filePath) => import(filePath.toString()),
-  plugins: [expect()],
+  plugins: [
+    expect(),
+    function jsDomPlugin() {
+      import("global-jsdom/register");
+    },
+  ],
 });
 
 await run();

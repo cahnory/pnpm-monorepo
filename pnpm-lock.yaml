@@ -115,6 +115,9 @@ importers:
       '@japa/runner':
         specifier: 3.0.0-9
         version: 3.0.0-9
+      '@testing-library/react':
+        specifier: ^14.0.0
+        version: 14.0.0(react-dom@18.2.0)(react@18.2.0)
       '@types/node':
         specifier: ^20.8.10
         version: 20.8.10
@@ -139,6 +142,12 @@ importers:
       eslint:
         specifier: ^8.52.0
         version: 8.52.0
+      global-jsdom:
+        specifier: ^9.1.0
+        version: 9.1.0(jsdom@22.1.0)
+      jsdom:
+        specifier: ^22.1.0
+        version: 22.1.0
       prettier:
         specifier: ^3.0.3
         version: 3.0.3
