@@ -47,10 +47,13 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
-  "eslint.format.enable": false,
+  "eslint.format.enable": true,
   "eslint.codeActionsOnSave.rules": null,
   "eslint.workingDirectories": [{ "mode": "auto" }],
-  "prettier.enable": false,
+  "prettier.enable": true,
+  // Temporary fix for prettier-vscode issue #3040
+  // see: https://github.com/prettier/prettier-vscode/issues/3040#issuecomment-1793748475
+  "prettier.prettierPath": "./node_modules/prettier/index.cjs",
 
   "material-icon-theme.folders.associations": {
     "components/primitives": "Delta",
