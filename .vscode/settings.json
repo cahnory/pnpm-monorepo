@@ -49,6 +49,8 @@
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
   "eslint.codeActionsOnSave.rules": null,
+  // Instructs ESLint to infer a working directory based on the location of
+  // package.json, .eslintignore and .eslintrc* files
   "eslint.workingDirectories": [{ "mode": "auto" }],
   "prettier.enable": true,
   // Temporary fix for prettier-vscode issue #3040
