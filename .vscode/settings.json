@@ -3,18 +3,10 @@
     "editor.defaultFormatter": "lkrms.inifmt"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "Jota0222.multi-formatter",
-    "multiFormatter.formatterList": [
-      "esbenp.prettier-vscode",
-      "dbaeumer.vscode-eslint"
-    ]
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[javascriptreact]": {
-    "editor.defaultFormatter": "Jota0222.multi-formatter",
-    "multiFormatter.formatterList": [
-      "esbenp.prettier-vscode",
-      "dbaeumer.vscode-eslint"
-    ]
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -29,18 +21,10 @@
     "editor.defaultFormatter": "lkrms.inifmt"
   },
   "[typescript]": {
-    "editor.defaultFormatter": "Jota0222.multi-formatter",
-    "multiFormatter.formatterList": [
-      "esbenp.prettier-vscode",
-      "dbaeumer.vscode-eslint"
-    ]
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[typescriptreact]": {
-    "editor.defaultFormatter": "Jota0222.multi-formatter",
-    "multiFormatter.formatterList": [
-      "esbenp.prettier-vscode",
-      "dbaeumer.vscode-eslint"
-    ]
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
 
   "editor.codeActionsOnSave": {
@@ -52,6 +36,16 @@
   // Instructs ESLint to infer a working directory based on the location of
   // package.json, .eslintignore and .eslintrc* files
   "eslint.workingDirectories": [{ "mode": "auto" }],
+  // Makes ESLint fix sources while prettier is set as the default formatter
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown"
+  ],
   "prettier.enable": true,
   // Temporary fix for prettier-vscode issue #3040
   // see: https://github.com/prettier/prettier-vscode/issues/3040#issuecomment-1793748475
