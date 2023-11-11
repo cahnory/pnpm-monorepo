@@ -60,11 +60,11 @@ importers:
         specifier: ^1.10.16
         version: 1.10.16
 
-  apps/node-sample:
+  apps/sample-app:
     dependencies:
       '@pnpm-monorepo/sample-lib':
         specifier: workspace:*
-        version: link:../../libs/sample
+        version: link:../../libs/sample-lib
     devDependencies:
       concurrently:
         specifier: ^8.2.2
@@ -82,7 +82,7 @@ importers:
         specifier: ^5.2.2
         version: 5.2.2
 
-  libs/sample:
+  libs/sample-lib:
     devDependencies:
       concurrently:
         specifier: ^8.2.2
