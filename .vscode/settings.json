@@ -51,6 +51,13 @@
   // see: https://github.com/prettier/prettier-vscode/issues/3040#issuecomment-1793748475
   "prettier.prettierPath": "./node_modules/prettier/index.cjs",
 
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.turbo": true
+  },
+
   "material-icon-theme.folders.associations": {
     "components/primitives": "Delta",
     ".turbo": "Archive"
