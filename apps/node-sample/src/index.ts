@@ -1,3 +1,3 @@
 import { sample } from "@pnpm-monorepo/sample-lib";
 
-sample() satisfies { pkg: "sample" };
+export const sampled = sample() satisfies { pkg: "@pnpm-monorepo/sample-lib" };

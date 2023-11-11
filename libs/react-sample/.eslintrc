@@ -3,7 +3,7 @@
   "extends": ["../../.eslintrc"],
   "overrides": [
     {
-      "files": ["japa.unit.ts", "vite.config.ts"],
+      "files": ["japa.unit.ts"],
       "rules": {
         "import/no-extraneous-dependencies": [
           "error",

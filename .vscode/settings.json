@@ -51,12 +51,16 @@
   // see: https://github.com/prettier/prettier-vscode/issues/3040#issuecomment-1793748475
   "prettier.prettierPath": "./node_modules/prettier/index.cjs",
 
+  "japa.tests.npmScript": "test:unit -- --log-prefix=none",
+  "japa.tests.filePattern": "**/*.spec.{ts,tsx}",
+
   "material-icon-theme.folders.associations": {
     "components/primitives": "Delta",
     ".turbo": "Archive"
   },
   "material-icon-theme.files.associations": {
     "*.css.ts": "Css",
+    "japa.unit.ts": "Test-ts",
     "tsconfig.react.json": "Tsconfig"
   },
 
