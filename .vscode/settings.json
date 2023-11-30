@@ -31,11 +31,8 @@
     "source.fixAll": true
   },
   "editor.formatOnSave": true,
-  "eslint.format.enable": true,
   "eslint.codeActionsOnSave.rules": null,
-  // Instructs ESLint to infer a working directory based on the location of
-  // package.json, .eslintignore and .eslintrc* files
-  "eslint.workingDirectories": [{ "mode": "auto" }],
+  "eslint.format.enable": true,
   // Makes ESLint fix sources while prettier is set as the default formatter
   "eslint.probe": [
     "javascript",
@@ -46,27 +43,27 @@
     "vue",
     "markdown"
   ],
-  "prettier.enable": true,
-  // Temporary fix for prettier-vscode issue #3040
-  // see: https://github.com/prettier/prettier-vscode/issues/3040#issuecomment-1793748475
-  "prettier.prettierPath": "./node_modules/prettier/index.cjs",
-
+  // Instructs ESLint to infer a working directory based on the location of
+  // package.json, .eslintignore and .eslintrc* files
+  "eslint.workingDirectories": [{ "mode": "auto" }],
   "files.exclude": {
     "**/.git": true,
     "**/.DS_Store": true,
     "**/Thumbs.db": true,
     "**/.turbo": true
   },
-
-  "material-icon-theme.folders.associations": {
-    "components/primitives": "Delta",
-    ".turbo": "Archive"
-  },
   "material-icon-theme.files.associations": {
     "*.css.ts": "Css",
     "tsconfig.react.json": "Tsconfig"
   },
-
+  "material-icon-theme.folders.associations": {
+    "components/primitives": "Delta",
+    ".turbo": "Archive"
+  },
+  "prettier.enable": true,
+  // Temporary fix for prettier-vscode issue #3040
+  // see: https://github.com/prettier/prettier-vscode/issues/3040#issuecomment-1793748475
+  "prettier.prettierPath": "./node_modules/prettier/index.cjs",
   "reader-mode.auto.glob": [
     "**/node_modules/**",
     "**/apps/*/build/**",
