@@ -18,10 +18,11 @@
   "scripts": {
     "build": "rimraf ./build && tsc --build --force tsconfig.build.json",
     "dev": "tsc -p tsconfig.build.json --watch",
-    "lint": "concurrently -r -g pnpm:lint:types pnpm:lint:semantic pnpm:lint:format",
+    "lint": "concurrently -r -g pnpm:lint:types pnpm:lint:semantic pnpm:lint:format pnpm:lint:usage",
     "lint:format": "prettier -c ./",
     "lint:semantic": "eslint ./",
     "lint:types": "tsc --noEmit",
+    "lint:usage": "knip",
     "lint:fix": "concurrently -r -g pnpm:lint:fix:format pnpm:lint:fix:semantic",
     "lint:fix:format": "prettier --write --list-different ./",
     "lint:fix:semantic": "eslint ./ --fix",
@@ -31,6 +32,7 @@
   "devDependencies": {
     "concurrently": "^8.2.2",
     "eslint": "^8.55.0",
+    "knip": "^3.6.0",
     "prettier": "^3.1.0",
     "rimraf": "^5.0.5",
     "typescript": "^5.3.3"
