@@ -23,11 +23,6 @@
     ".eslintrc",
     ".prettierrc",
     "tsconfig.base.json",
-    "tsconfig.react.json",
-
-    "apps/*/tsconfig.json",
-    "libs/*/tsconfig.json",
-    "apps/*/.eslintignore.json",
-    "libs/*/.eslintignore.json"
+    "tsconfig.react.json"
   ]
 }
