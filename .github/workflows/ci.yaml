@@ -67,6 +67,8 @@ jobs:
         include:
           - os: windows-latest
             node-version: 20.x
+          - os: macos-latest
+            node-version: 20.x
 
     runs-on: ${{ matrix.os }}
 
