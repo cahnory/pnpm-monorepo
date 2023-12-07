@@ -52,6 +52,9 @@ jobs:
       - name: Lint format
         run: pnpm lint:format
         if: always()
+      - name: Lint usage
+        run: pnpm lint:usage
+        if: always()
       - name: Lint commits
         run: pnpm lint:commits
         if: always()

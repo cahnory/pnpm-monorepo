@@ -29,6 +29,7 @@
     "lint:rebase": "bash scripts/test-rebase.sh $npm_package_config_defaultBranch",
     "lint:semantic": "turbo run lint:semantic --continue",
     "lint:types": "turbo run lint:types --continue",
+    "lint:usage": "turbo run lint:usage --continue",
     "lint:fix": "turbo run lint:fix --continue",
     "lint:fix:format": "turbo run lint:fix:format --continue",
     "lint:fix:semantic": "turbo run lint:fix:semantic --continue",

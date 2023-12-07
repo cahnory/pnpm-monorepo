@@ -19,6 +19,7 @@
     "lint:types": {
       "dependsOn": ["^build"]
     },
+    "lint:usage": {},
     "lint:fix": {
       "dependsOn": ["^build"]
     },
