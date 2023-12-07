@@ -25,7 +25,9 @@
     "tsconfig.base.json",
     "tsconfig.react.json",
 
-    "@(apps|libs)/tsconfig.json",
-    "@(apps|libs)/.eslintignore"
+    "apps/*/tsconfig.json",
+    "libs/*/tsconfig.json",
+    "apps/*/.eslintignore.json",
+    "libs/*/.eslintignore.json"
   ]
 }
