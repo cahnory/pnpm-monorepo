@@ -28,7 +28,7 @@
   },
 
   "editor.codeActionsOnSave": {
-    "source.fixAll": true
+    "source.fixAll": "explicit"
   },
   "editor.formatOnSave": true,
   "eslint.codeActionsOnSave.rules": null,
