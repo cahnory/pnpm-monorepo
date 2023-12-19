@@ -62,7 +62,6 @@
     "tsconfig.react.json": "Tsconfig"
   },
   "material-icon-theme.folders.associations": {
-    "components/primitives": "Delta",
     ".turbo": "Archive"
   },
   "prettier.enable": true,
