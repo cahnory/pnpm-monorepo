@@ -2,7 +2,6 @@
   "recommendations": [
     "dbaeumer.vscode-eslint",
     "esbenp.prettier-vscode",
-    "lkrms.inifmt",
-    "theoolee.reader-mode"
+    "lkrms.inifmt"
   ]
 }

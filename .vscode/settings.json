@@ -52,6 +52,11 @@
     "**/Thumbs.db": true,
     "**/.turbo": true
   },
+  "files.readonlyInclude": {
+    "**/node_modules/**": true,
+    "**/apps/*/build/**": true,
+    "**/libs/*/build/**": true
+  },
   "material-icon-theme.files.associations": {
     "*.css.ts": "Css",
     "tsconfig.react.json": "Tsconfig"
@@ -63,10 +68,5 @@
   "prettier.enable": true,
   // Temporary fix for prettier-vscode issue #3040
   // see: https://github.com/prettier/prettier-vscode/issues/3040#issuecomment-1793748475
-  "prettier.prettierPath": "./node_modules/prettier/index.cjs",
-  "reader-mode.auto.glob": [
-    "**/node_modules/**",
-    "**/apps/*/build/**",
-    "**/libs/*/build/**"
-  ]
+  "prettier.prettierPath": "./node_modules/prettier/index.cjs"
 }
