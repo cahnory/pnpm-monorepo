@@ -112,11 +112,11 @@ Some files are marked as read-only using _files.readonlyInclude_ setting, preven
 By default, the [configuration](./.vscode/settings.json) includes patterns targeting files and directories commonly generated during development, like "node_modules" and "build" directories for both apps and libraries:
 
 ```json
-  "reader-mode.auto.glob": [
-    "**/node_modules/**",
-    "**/apps/*/build/**",
-    "**/libs/*/build/**"
-  ]
+  "files.readonlyInclude": {
+    "**/node_modules/**": true,
+    "**/apps/*/build/**": true,
+    "**/libs/*/build/**": true
+  }
 ```
 
 Extend this list to safeguard additional files as needed.
