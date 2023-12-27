@@ -20,7 +20,7 @@
     "dev": "tsc -p tsconfig.build.json --watch",
     "lint": "concurrently -r -g pnpm:lint:types pnpm:lint:semantic pnpm:lint:format",
     "lint:format": "prettier -c ./",
-    "lint:semantic": "eslint ./",
+    "lint:semantic": "eslint ./ --max-warnings 0",
     "lint:types": "tsc --noEmit",
     "lint:fix": "concurrently -r -g pnpm:lint:fix:format pnpm:lint:fix:semantic",
     "lint:fix:format": "prettier --write --list-different ./",
