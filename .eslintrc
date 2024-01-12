@@ -270,6 +270,7 @@
       {
         "args": "after-used",
         "argsIgnorePattern": "^_",
+        "ignoreRestSiblings": true,
         "vars": "all"
       }
     ],
