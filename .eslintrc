@@ -1,25 +1,24 @@
 {
-  "$schema": "https://json.schemastore.org/eslintrc",
   "env": {
-    "es2021": true
+    "es2021": true,
   },
   "extends": [
     "eslint:recommended",
     "plugin:perfectionist/recommended-natural",
-    "prettier"
+    "prettier",
   ],
   "overrides": [
     // TypeScript override
     {
       "extends": [
         "plugin:import/typescript",
-        "plugin:@typescript-eslint/strict-type-checked"
+        "plugin:@typescript-eslint/strict-type-checked",
       ],
       "files": ["**/*.ts?(x)"],
       "parser": "@typescript-eslint/parser",
       "parserOptions": {
         "project": true,
-        "EXPERIMENTAL_useProjectService": true
+        "EXPERIMENTAL_useProjectService": true,
       },
       "plugins": ["@typescript-eslint"],
       "rules": {
@@ -42,15 +41,15 @@
         // Disabled in favor of "@typescript-eslint/sort-type-constituents"
         "perfectionist/sort-union-types": ["off"],
         // Added option.markers allowing TypeScripe's triple-slash directives
-        "spaced-comment": ["error", "always", { "markers": ["/"] }]
-      }
+        "spaced-comment": ["error", "always", { "markers": ["/"] }],
+      },
     },
     // React override
     {
       "extends": [
         "plugin:react/recommended",
         "plugin:react/jsx-runtime",
-        "plugin:react-hooks/recommended"
+        "plugin:react-hooks/recommended",
       ],
       "files": ["**/*.[tj]sx"],
       "plugins": ["react", "react-hooks"],
@@ -64,7 +63,7 @@
         "react/jsx-no-constructed-context-values": ["error"],
         "react/jsx-no-leaked-render": [
           "error",
-          { "validStrategies": ["coerce", "ternary"] }
+          { "validStrategies": ["coerce", "ternary"] },
         ],
         "react/jsx-pascal-case": ["warn"],
         "react/no-array-index-key": ["error"],
@@ -73,25 +72,25 @@
         "react/no-unstable-nested-components": ["error"],
         "react/self-closing-comp": ["warn"],
         "react/void-dom-elements-no-children": ["error"],
-        "react-hooks/exhaustive-deps": "error"
+        "react-hooks/exhaustive-deps": "error",
       },
       "settings": {
         "react": {
-          "version": "detect"
-        }
-      }
-    }
+          "version": "detect",
+        },
+      },
+    },
   ],
   "parserOptions": {
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
   },
   "plugins": ["perfectionist", "import", "unused-imports"],
   "reportUnusedDisableDirectives": true,
   "rules": {
     "array-callback-return": [
       "error",
-      { "allowImplicit": true, "checkForEach": true }
+      { "allowImplicit": true, "checkForEach": true },
     ],
     "block-scoped-var": "error",
     "camelcase": ["error"],
@@ -105,8 +104,8 @@
     "func-name-matching": [
       "error",
       {
-        "considerPropertyDescriptor": true
-      }
+        "considerPropertyDescriptor": true,
+      },
     ],
     "func-style": ["error", "expression"],
     "grouped-accessor-pairs": ["error", "getBeforeSet"],
@@ -126,8 +125,8 @@
       "error",
       {
         "devDependencies": false,
-        "optionalDependencies": false
-      }
+        "optionalDependencies": false,
+      },
     ],
     "import/no-mutable-exports": "error",
     "import/no-named-default": "error",
@@ -143,14 +142,14 @@
     "logical-assignment-operators": [
       "error",
       "always",
-      { "enforceForIfStatements": true }
+      { "enforceForIfStatements": true },
     ],
     "max-classes-per-file": [
       "error",
       {
         "ignoreExpressions": true,
-        "max": 1
-      }
+        "max": 1,
+      },
     ],
     "no-alert": "error",
     "no-array-constructor": "error",
@@ -224,29 +223,29 @@
     "perfectionist/sort-objects": [
       "warn",
       {
-        "partition-by-comment": "Part:**"
-      }
+        "partition-by-comment": "Part:**",
+      },
     ],
     "perfectionist/sort-object-types": ["warn"],
     "prefer-arrow-callback": [
       "error",
       {
-        "allowNamedFunctions": true
-      }
+        "allowNamedFunctions": true,
+      },
     ],
     "prefer-const": [
       "error",
-      { "destructuring": "all", "ignoreReadBeforeAssign": true }
+      { "destructuring": "all", "ignoreReadBeforeAssign": true },
     ],
     "prefer-destructuring": [
       "error",
       {
         "array": true,
-        "object": true
+        "object": true,
       },
       {
-        "enforceForRenamedProperties": false
-      }
+        "enforceForRenamedProperties": false,
+      },
     ],
     "prefer-named-capture-group": "off",
     "prefer-numeric-literals": "off",
@@ -271,21 +270,21 @@
         "args": "after-used",
         "argsIgnorePattern": "^_",
         "ignoreRestSiblings": true,
-        "vars": "all"
-      }
+        "vars": "all",
+      },
     ],
     "vars-on-top": "error",
-    "yoda": ["error", "never"]
+    "yoda": ["error", "never"],
   },
   "settings": {
     "import/parsers": {
-      "@typescript-eslint/parser": [".ts", ".tsx"]
+      "@typescript-eslint/parser": [".ts", ".tsx"],
     },
     "import/resolver": {
       "typescript": {
         "alwaysTryTypes": true,
-        "project": ["apps/*/tsconfig.json", "libs/*/tsconfig.json"]
-      }
-    }
-  }
+        "project": ["apps/*/tsconfig.json", "libs/*/tsconfig.json"],
+      },
+    },
+  },
 }

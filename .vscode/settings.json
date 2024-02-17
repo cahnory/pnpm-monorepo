@@ -57,6 +57,18 @@
     "**/apps/*/build/**": true,
     "**/libs/*/build/**": true
   },
+  "json.schemas": [
+    {
+      "fileMatch": [".eslintrc"],
+      "schema": {
+        // Since prettier apply trailingComma setting to jsonc, we have to tell vscode
+        // that this is not a problem with eslintrc files.
+        // see: https://github.com/prettier/prettier/issues/15956#issuecomment-1949882227
+        "allowTrailingCommas": true,
+        "$schema": "https://json.schemastore.org/eslintrc"
+      }
+    }
+  ],
   "material-icon-theme.files.associations": {
     "*.css.ts": "Css",
     "tsconfig.react.json": "Tsconfig"

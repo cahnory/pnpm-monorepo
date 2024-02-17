@@ -36,10 +36,10 @@
     "test:unit": "turbo run test:unit --continue"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.4.4",
-    "@commitlint/config-conventional": "^18.4.4",
-    "@commitlint/cz-commitlint": "^18.4.4",
-    "@typescript-eslint/eslint-plugin": "^6.18.1",
+    "@commitlint/cli": "^18.6.1",
+    "@commitlint/config-conventional": "^18.6.2",
+    "@commitlint/cz-commitlint": "^18.6.1",
+    "@typescript-eslint/eslint-plugin": "^7.0.1",
     "commitizen": "^4.3.0",
     "concurrently": "^8.2.2",
     "eslint": "^8.56.0",
@@ -49,9 +49,9 @@
     "eslint-plugin-perfectionist": "^2.5.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-unused-imports": "^3.0.0",
+    "eslint-plugin-unused-imports": "^3.1.0",
     "only-allow": "^1.2.1",
-    "prettier": "^3.2.0",
-    "turbo": "^1.11.3"
+    "prettier": "^3.2.5",
+    "turbo": "^1.12.4"
   }
 }
